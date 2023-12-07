@@ -49,7 +49,7 @@ urlpatterns = [
 
 ```
 
-Crear una función de prueba en views.py en AppCoder, se debe ingresar en la ruta AppCoder/inicio/ del navegador, esto es para prueba, estamos realizando “el esqueleto de como queremos que funcione nuestro sitio”
+Crear una función de prueba en views.py en AppCoder, se debe ingresar en la ruta AppCoder/ del navegador, esto es para prueba, estamos realizando “el esqueleto de como queremos que funcione nuestro sitio”
 ```python
 Ejemplo:
 def buscar_personas_view (request):
