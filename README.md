@@ -90,7 +90,7 @@ urlpatterns = [
 
 8. Creando templates y herencia
 Crear un directorio llamado `templates` dentro del directorio `AppCoder`, luego crear otro directorio dentro de `templates` llamado `AppCoder y dentro padre.html.
-Crear ruta llamada `inicio` dentro de urls.py AppCoder 
+ 
 ```python
 path("padre/", padre_view),
 ```
