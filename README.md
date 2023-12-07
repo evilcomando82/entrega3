@@ -101,7 +101,7 @@ def padre_view(request):
 ```
 
 ```python
-Agregamos en `cursos.html`
+Agregamos en `crear.cursos.html`  (y en el resto de páginas "crear")
     ```html
     {% extends "AppCoder/padre.html" %}
     ```
