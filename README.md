@@ -1,3 +1,5 @@
+ALUMNO: SEBASTIÁN NAVARRO VEAS
+
 ## Configuración inicial del proyecto
 Crear carpeta para nuestro repositorio, "proyecto3"
 1.	Crear archivo README.md
