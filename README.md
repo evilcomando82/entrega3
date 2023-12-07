@@ -33,7 +33,7 @@ path("AppCoder/", include("AppCoder.urls")),
 ```
 
 Copiar archivo TercerProyecto/urls.py en AppCoder
-Crear ruta llamada `inicio` dentro de urls.py AppCoder 
+Crear ruta dentro de urls.py AppCoder 
 
 
 ```python
@@ -43,7 +43,7 @@ from django.urls import path
 from AppCoder.views import personas_view
 
 urlpatterns = [
-    path("inicio/", personas_view),
+    path("", personas_view),
     
 ]
 
