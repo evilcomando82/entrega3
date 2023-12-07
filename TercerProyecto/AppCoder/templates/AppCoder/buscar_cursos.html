@@ -1,0 +1,49 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block title %}
+<h2>Buscar Cursos por nombre</h2>
+{% endblock %}
+
+
+{% block context %}
+
+    <form  method="POST" action="{% url 'buscar_cursos' %}" >
+        {% csrf_token %}
+        <input type="text" name="nombre" id="nombre"/>
+
+        <input type="submit" value="Buscar" class="mb-5"/>
+    </form>
+    
+    {% if curso.count > 0 %}
+    <div class="container">
+    <table class="table table-bordered table-dark  ">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+           </tr>
+        </thead>
+        <tbody>
+            {% for curs in curso  %}
+          <tr>
+             
+            <td>{{curs.id}}</td>
+            <td>{{curs.nombre}}</td>
+           
+             
+          </tr>
+          {% endfor %}
+         
+        </tbody>
+      </table>  
+    </div>    
+    {% endif %}
+
+    {% if curso.count == 0 %}
+    <div class="alert alert-danger" role="alert">
+        {{mensaje}} 
+    </div>
+    {% endif %}
+    
+    
+{% endblock %}

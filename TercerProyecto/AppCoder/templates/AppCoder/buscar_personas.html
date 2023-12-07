@@ -1,0 +1,57 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block title %}
+<h2>Buscar Personas por nombre</h2>
+{% endblock %}
+
+
+{% block context %}
+
+    <form  method="POST" action="{% url 'buscar_personas' %}" >
+        {% csrf_token %}
+        <input type="text" name="nombre" id="nombre"/>
+
+        <input type="submit" value="Buscar" class="mb-5"/>
+    </form>
+    
+    {% if persona.count > 0 %}
+    <div class="container">
+    <table class="table table-bordered table-dark ">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">País</th>
+            <th scope="col">Curso</th>
+             
+          </tr>
+        </thead>
+        <tbody>
+            {% for pers in persona  %}
+          <tr>
+             
+            <td>{{pers.id}}</td>
+            <td>{{pers.nombre}}</td>
+            <td>{{pers.apellido}}</td>
+            <td>{{pers.pais_origen}}</td>
+            <td>{{pers.curso_origen}}</td>
+             
+          </tr>
+          {% endfor %}
+         
+        </tbody>
+      </table>  
+    </div>    
+    {% endif %}
+
+    {% if persona.count == 0 %}
+    <div class="alert alert-danger" role="alert">
+        {{mensaje}} 
+    </div>
+    {% endif %}
+    
+    
+{% endblock %}
+
+

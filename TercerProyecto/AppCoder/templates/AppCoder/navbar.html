@@ -1,0 +1,44 @@
+<div id="container">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" >
+        <h3 class="mt-2 me-5 ms-4">Gestión de Personal</h3>         
+        <ul>
+                       
+            <li><a href="#">Persona</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+                <li><a href="{% url 'crear_personas' %}">Crear persona</a></li>
+                <li><a href="{% url 'buscar_personas' %}">Buscar persona</a></li>
+                <li><a href="{% url 'listar_personas' %}">Listar personas</a></li>
+            	<!-- Second Tier Drop Down -->
+               
+            </ul>
+            </li>
+
+            <li><a href="#">País</a>
+                <!-- First Tier Drop Down -->
+                <ul>
+                <li><a href="{% url 'crear_paises' %}">Crear paises</a></li>
+                <li><a href="{% url 'buscar_paises' %}">Buscar paises</a></li>
+                <li><a href="{% url 'listar_paises' %}">Listar paises</a></li>
+                    <!-- Second Tier Drop Down -->
+                   
+                </ul>
+                </li>
+
+                <li><a href="#">Cursos</a>
+                    <!-- First Tier Drop Down -->
+                    <ul>
+                    <li><a href="{% url 'crear_cursos' %}">Crear cursos</a></li>
+                    <li><a href="{% url 'buscar_cursos' %}">Buscar cursos</a></li>
+                    <li><a href="{% url 'listar_cursos' %}">Listar cursos</a></li>
+                        <!-- Second Tier Drop Down -->
+                       
+                    </ul>
+                    </li>
+
+
+         
+        </ul>
+    </nav>
+  
+</div>

@@ -1,0 +1,35 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block title %}
+<h2>Listar Paises</h2>
+{% endblock %}
+
+
+{% block context %}
+
+<div class="container">
+  <table class="table table-bordered table-dark ">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nombre</th>
+         
+         
+      </tr>
+    </thead>
+    <tbody>
+        {% for pais in paises  %}
+      <tr>
+         
+        <td>{{pais.id}}</td>
+        <td>{{pais.nombre}}</td>
+       
+         
+      </tr>
+      {% endfor %}
+     
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

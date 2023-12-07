@@ -1,0 +1,44 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block title %}
+<h2>Listar Personas</h2>
+{% endblock %}
+
+
+{% block context %}
+
+<div class="container">
+  <table class="table table-bordered table-dark ">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Pais</th>
+        <th scope="col">Curso</th>
+         
+      </tr>
+    </thead>
+    <tbody>
+        {% for persona in personas  %}
+      <tr>
+         
+        <td>{{persona.id}}</td>
+        <td>{{persona.nombre}}</td>
+        <td>{{persona.apellido}}</td>
+        <td>{{persona.pais_origen}}</td>
+        <td>{{persona.curso_origen}}</td>
+         
+      </tr>
+      {% endfor %}
+     
+    </tbody>
+  </table>
+</div>
+
+ 
+
+
+
+
+{% endblock %}
